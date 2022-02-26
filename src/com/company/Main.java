@@ -5,6 +5,7 @@ import java.awt.Point;
 public class Main {
 
     public static void main(String[] args) {
+      System.out.println("Rectangle:");
       Rectangle rectangle = new Rectangle(2, 4, new Point(0, 0));
 
       System.out.println(rectangle.getCenter());
@@ -12,5 +13,14 @@ public class Main {
       System.out.println(rectangle.getCircumference());
       System.out.println(rectangle.isPointInside(new Point(1, 2)));
       System.out.println(rectangle.getEuclideanDistance(rectangle));
+
+      System.out.println("Triangle:");
+      Triangle triangle = new Triangle(new Point(), new Point(3, 9), new Point(6, 0));
+
+      System.out.println(triangle.getCenter());
+      System.out.println(triangle.getArea());
+      System.out.println(triangle.getCircumference());
+      System.out.println(triangle.isPointInside(new Point(3, 1)));;
+      System.out.println(triangle.getEuclideanDistance(triangle));
     }
 }
