@@ -22,5 +22,14 @@ public class Main {
       System.out.println(triangle.getCircumference());
       System.out.println(triangle.isPointInside(new Point(3, 1)));;
       System.out.println(triangle.getEuclideanDistance(triangle));
+
+      System.out.println("Circle:");
+      Circle circle = new Circle(new Point(), 5);
+
+      System.out.println(circle.getCenter());
+      System.out.println(circle.getArea());
+      System.out.println(circle.getCircumference());
+      System.out.println(circle.isPointInside(new Point(-1, -2)));
+      System.out.println(circle.getEuclideanDistance(rectangle));
     }
 }
