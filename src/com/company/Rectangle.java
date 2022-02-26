@@ -25,11 +25,11 @@ public class Rectangle extends Shape {
     return new Point2D.Double(x, y);
   }
 
-  public int getArea() {
+  public double getArea() {
     return this.width * this.height;
   }
 
-  public int getCircumference() {
+  public double getCircumference() {
     return this.width * 2 + this.height * 2;
   }
 
@@ -41,9 +41,5 @@ public class Rectangle extends Shape {
     int shapeY = this.bottomLeftPoint.y;
 
     return (x >= shapeX && y >= shapeY && x <= this.width + shapeX && y <= this.height + shapeY);
-  }
-
-  public double getEuclideanDistance(Shape shape) {
-    return this.getCenter().distance(shape.getCenter());
   }
 }
