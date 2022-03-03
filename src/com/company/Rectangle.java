@@ -17,6 +17,7 @@ public class Rectangle extends Shape {
     this.bottomLeftPoint = point;
   }
 
+  @Override
   public Point2D getCenter() {
     // Calculate center coordinates with added bottom left point offset
     double x = (double)this.width / 2 + this.bottomLeftPoint.getX();
@@ -25,14 +26,17 @@ public class Rectangle extends Shape {
     return new Point2D.Double(x, y);
   }
 
+  @Override
   public double getArea() {
     return this.width * this.height;
   }
 
+  @Override
   public double getCircumference() {
     return this.width * 2 + this.height * 2;
   }
 
+  @Override
   public boolean isPointInside(Point point) {
     int x = point.x;
     int y = point.y;

@@ -13,19 +13,23 @@ public class Circle extends Shape {
     this.radius = radius;
   }
 
+  @Override
   public Point2D getCenter() {
     return this.center;
   }
 
+  @Override
   public double getArea() {
     return Math.pow(this.radius, 2) * Math.PI;
   }
 
+  @Override
   public double getCircumference() {
     return 2 * this.radius * Math.PI;
   }
 
   // https://stackoverflow.com/questions/481144/equation-for-testing-if-a-point-is-inside-a-circle
+  @Override
   public boolean isPointInside(Point point) {
     return Math.pow(point.x - center.x, 2) + Math.pow(point.y - center.y, 2)  <= radius * radius;
   }

@@ -24,6 +24,7 @@ public class Triangle extends Shape {
   }
 
   // https://www.cuemath.com/centroid-formula/
+  @Override
   public Point2D getCenter() {
     double centerX = (double)(this.aPoint.x + this.bPoint.x + this.cPoint.x) / 3;
     double centerY = (double)(this.aPoint.y + this.bPoint.y + this.cPoint.y) / 3;
@@ -32,6 +33,7 @@ public class Triangle extends Shape {
   }
 
   // https://www.cuemath.com/measurement/area-of-triangle/
+  @Override
   public double getArea() {
     return calculateArea(this.aPoint, this.bPoint, this.cPoint);
   }
@@ -46,6 +48,7 @@ public class Triangle extends Shape {
     return Math.sqrt(s * (s - bottomSide) * (s - leftSide) * (s - rightSide));
   }
 
+  @Override
   public double getCircumference() {
     double bottomSide = this.aPoint.distance(this.cPoint);
     double leftSide = this.aPoint.distance(this.bPoint);
@@ -55,6 +58,7 @@ public class Triangle extends Shape {
   }
 
   // https://discuss.codechef.com/t/best-way-to-check-if-a-point-lies-inside-a-triangle-or-not/13528
+  @Override
   public boolean isPointInside(Point point) {
     double area = getArea();
 
